@@ -25,7 +25,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
     version   = "latest"
   }
 
-  #  Zalecana alternatywa dla remote-exec
+  #  Recommended alternative to remote-exec
   #  custom_data = filebase64("${path.module}/script.sh")
 
   connection {
@@ -47,7 +47,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   }
 
   provisioner "file" {
-    source      = "./wiadomosc.md"
-    destination = "wiadomosc.md"
+    source      = "./message.md"
+    destination = "message.md"
   }
 }

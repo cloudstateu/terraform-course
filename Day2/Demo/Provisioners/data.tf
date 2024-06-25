@@ -1,3 +1,3 @@
 data "azurerm_resource_group" "rg" {
-  name = "__TWOJA_GRUPA_ZASOBÓW__"
+  name = "__YOUR_RESOURCE_GROUP__"
 }

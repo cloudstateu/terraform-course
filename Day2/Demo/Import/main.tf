@@ -1,5 +1,5 @@
 
-// Przykładowa reprezentacja zasobu
+// Example resource block
 resource "azurerm_key_vault" "vault" {
   name                        = "chmstudent0toimport"
   location                    = data.azurerm_resource_group.rg.location
@@ -15,5 +15,5 @@ resource "azurerm_key_vault" "vault" {
 }
 
 
-// Import przy pomocy
-// terraform import azurerm_key_vault.value ___TUTAJ_ID_ZASOBU___
+// Import using terraform command
+// terraform import azurerm_key_vault.value __YOUR_RESOURCE_ID__

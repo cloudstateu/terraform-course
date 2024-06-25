@@ -9,8 +9,8 @@ locals {
   set_storage = toset(local.storage)
 }
 
-# Przykład wykorzystania length z count
-# Tutaj zalecamy wykorzystanie for_each ze względu na indeks int w count!!!
+# Example of using length function together with count argument
+# Here we recommend using for_each because of the int index in count!!!
 resource "azurerm_storage_account" "storage" {
   count = length(local.storage)
 

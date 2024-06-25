@@ -11,3 +11,8 @@ variable "is_production" {
   type = bool
   default = false
 }
+
+variable "example" {
+  type = string
+  default = "World"
+}
