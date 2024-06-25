@@ -20,7 +20,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 6. Sprawdź w portalu jakie zasoby zostały utworzone za pomoca modułu.
 7. Spróbuj zalogować się do utworzonej maszyny z poziomu lokalnej konsoli poprzez ssh. W tym celu użyj jej publicznego adresu IP.
 
-Pomocne linki:
+Helpful links:
 
 * [Publiczny moduł compute](https://registry.terraform.io/modules/Azure/compute/azurerm/latest)
 
@@ -82,7 +82,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 8. Standardowo uruchom polecenia `terraform plan` aby zweryfikować swoją konifgurację oraz `terraform apply` aby wdrożyć zmiany.
 9. Sprawdź konfigurację stworzonych zasobów. Spróbuj odnaleźć je w pliku stanu. Zwróć uwagę jak wygląda ich referencja.
 
-Pomocne linki:
+Helpful links:
 
 * [Zasób Virtual Network](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network)
 * [Zasób Virtual Network Peering](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network_peering)
@@ -124,7 +124,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 7. Jeśli moduł działa prawidłowo, stwórz za jego pomocą 2 sieci (z zasobami zdefiniowanymi w module) odpowiadające odpowiednio
    środowisku `dev` oraz `prod`. Nazwa środowiska powinna być zawarta w nazwie tworzonych sieci.
 
-   Pomocne linki:
+   Helpful links:
 
 * [Zasób Subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
 * [Zasób Network Security Group](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/network_security_group)
@@ -148,7 +148,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
    zasobu Key Vault. Jako podsieć wskaż podsieć `endpoint` przekazywaną z modułu za pomocą bloku utworzonego w poprzednim punkcie.
 4. Standardowo uruchom polecenia `terraform plan` aby zweryfikować swoją konifgurację oraz `terraform apply` aby wdrożyć zmiany.
 
-Pomocne linki:
+Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 * [Dostępne nazwy zasobów podrzędnych](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-overview#private-link-resource)
@@ -159,7 +159,7 @@ Pomocne linki:
 Jeśli udało Ci sie prawodłowo skonfigurować endpoint dla usługi Key Vault, spróbuj zrobić to samo, tym razem dla File Share,
 utworzonego w poprzednich zadaniach.
 
-Pomocne linki:
+Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 * [Dostępne nazwy zasobów podrzędnych](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-overview#private-link-resource)
@@ -176,7 +176,7 @@ Na co warto zwrócić uwagę:
   lokalnej z nazwą sieci do której tworzone jest połączenie.
 * Wykorzystaj pętlę `for_each` jak w przypadku sieci shared.
 
-Pomocne linki:
+Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 * [Dokumentacja zasobu private_dns_zone_virtual_network_link](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link)
@@ -192,7 +192,7 @@ hasło administratora servera. Dodatkowo wskaż następujące argumenty i wskaza
   storage_mb = 32768
   zone       = "1"
 
-Pomocne linki:
+Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 * [Dokumentacja Postgresql Flexible Server](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/postgresql_flexible_server)
@@ -214,7 +214,7 @@ Wymagania:
    - `Contributor` na zasobie Twojej grupy zasobów
    - `Managed Identity Operator` na zasobie drugiej z tworzonych tożsamości
 
-Pomocne linki:
+Helpful links:
 
 * [Dokumentacja User Assigned Identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity)
 * [Dokumentacja Role Assigment](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/role_assignment)
@@ -250,7 +250,7 @@ posiadać następujące wartości:
    }
    ```
 
-Pomocne linki:
+Helpful links:
 
 * [Dokumentacja Azure Kubernetes Service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/kubernetes_cluster)
 
@@ -293,7 +293,7 @@ W środowisku Azure DevOps:
    - Wskaż opcję `Existing Azure Pipelines YAML File`,
    - Następnie z menu w sekcji "Path" wskaż stworzony plik z repozytorium.
 
-Pomocne linki:
+Helpful links:
 
 * [Tworzenie projektu w usłudze Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/organizations/projects/create-project?view=azure-devops&tabs=browser)
 * [Używanie komend Terraform dla Azure DevOps](https://github.com/microsoft/azure-pipelines-terraform/blob/main/Tasks/TerraformTask/TerraformTaskV4/README.md)

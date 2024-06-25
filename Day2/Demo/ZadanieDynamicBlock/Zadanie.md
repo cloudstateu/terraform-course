@@ -28,7 +28,7 @@ locals {
 
 Wartość `tenant_id` przy konfiguracji pobierz z data `azurerm_client_config`.
 
-Pomocne linki:
+Helpful links:
 
 * [Dokumentacja Dynamic Blocks](https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks)
 * [Dokumentacja Azure Key Vault](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault)

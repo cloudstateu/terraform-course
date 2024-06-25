@@ -37,7 +37,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 9. Dodaj zasób łączący strefy DNS z siecią `vnet-shared`. Również wykorzystaj pętlę `for_each`. Dodatkowo w nazwie zasobu
    połącz myślnikiem nazwę usługi, przetrzymywaną jako klucz w zmiennej lokalnej, z nazwą sieci np. `file-vnet-shared`.
 
-Pomocne linki:
+Helpful links:
 
 * [Zalecane nazwy prywatnych stref dns](https://learn.microsoft.com/pl-pl/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration)
 * [Pętla for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
@@ -76,7 +76,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
    polecenie `terraform plan` i sprawdź, jak zachowa się Terraform wobec aktualnie istniejących sekretów.
 7. Sprawdź jak przedstawiony jest zasób wykorzystujący `count` w pliku stanu.
 
-Pomocne linki:
+Helpful links:
 
 * [Zasób azurerm_key_vault_secret](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault_secret)
 * [Pętla count](https://developer.hashicorp.com/terraform/language/meta-arguments/count)
@@ -104,7 +104,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 5. Standardowo uruchom polecenia `terraform plan` aby zweryfikować swoją konifgurację oraz `terraform apply` aby wdrożyć zmiany.
 6. Zweryfikuj utworzenie Diagnostic Setting przez wyszukanie w Azure Key Vault.
 
-Pomocne linki:
+Helpful links:
 
 * [Dokumentacja Dynamic Blocks](https://developer.hashicorp.com/terraform/language/expressions/dynamic-blocks)
 * [Dokumentacja Log Analytics Workspace](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/log_analytics_workspace)

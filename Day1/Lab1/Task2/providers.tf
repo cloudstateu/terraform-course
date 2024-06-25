@@ -9,6 +9,6 @@ terraform {
 
 provider "azurerm" {
   # Configuration options
-  subscription_id = "__ID__TWOJEJ__SUBSKRYPCJI__"
+  subscription_id = "__YOUR__SUBSCRIPTION__ID__"
   features {}
 }

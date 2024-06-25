@@ -44,7 +44,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 5. Zweryfikuj, czy utworzenie zasobu przebiegło pomyślnie przez wyszukanie zasobu w portalu Azure.
 6. Sprawdź, jakie zmiany powstały w pliku stanu, zwróć uwagę na różnice pomiędzy `data` a `resource`.
 
-Pomocne linki:
+Helpful links:
 
 * [Zasób azurerm_key_vault](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/key_vault)
 * [Data azurerm_client_config](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config)
@@ -72,7 +72,7 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
    środowiskowych TF_VAR_. Spróbuj przekazać wartość na kilka sposób jednocześnie i sprawdź efekt.*
 
 
-Pomocne linki:
+Helpful links:
 
 * [Zasób azurerm_virtual_network](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/virtual_network)
 * [Zasób azurerm_subnet](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet)
@@ -91,7 +91,7 @@ Na co warto zwrócić uwagę:
 * Podczas tworzenia File Share wybierz Quota: 50gb.
 * Zasób ten będzie dedykowany dla środowiska aplikacji.
 
-Pomocne linki:
+Helpful links:
 
 * [Dokumentacja Storage Account](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_account)
 * [Dokumentacja Storage Share](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/storage_share)
@@ -108,7 +108,7 @@ Na co warto zwrócić uwagę:
 * Stwórz zasób z włączoną opcją użytkownika typu administrator definiując odpowiedni argument wraz z wartością.
 * Zablokuj dostep publiczny do tworzonej usługi definiując odpowiedni argument wraz z wartością.
 
-Pomocne linki:
+Helpful links:
 
 * [Dokumentacja zasobu azurerm_container_registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry)
 
@@ -142,7 +142,7 @@ Na co warto zwrócić uwagę:
 * W parametrze `subnet_id` podczas tworzenia private endpoint należy wskazać podsieć przeznaczoną na private endpoint.
    będzie to podsieć `endpoints`w sieci `vnet-shared`.
 
-Pomocne linki:
+Helpful links:
 
 * [Zalecane nazwy prywatnych stref dns](https://learn.microsoft.com/pl-pl/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration)
 * [Dostępne nazwy zasobów podrzędnych](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-overview#private-link-resource)
