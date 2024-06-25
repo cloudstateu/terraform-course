@@ -82,7 +82,7 @@ Helpful links:
 
 ## Task 3 - Log Analytics Workspace (optional)
 
-The purpose of the task is nauczenie się wykorzystywania dynamic blocks.
+The purpose of the task is to learn using dynamic blocks.
 
 Let's try to create a Log Analytics Workspace resource and to configure a solution for sending there logs and metrics
 from Azure Key Vault. For this purpose, use the `azurerm_monitor_diagnostic_setting` resource and download the available
