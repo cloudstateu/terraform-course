@@ -1,4 +1,4 @@
-# ZTask: Dynamic Blocks
+# Task: Dynamic Blocks
 
 Prepare a new terraform configuration with the data source pointing to Your resource group.
 
