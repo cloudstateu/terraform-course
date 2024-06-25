@@ -1,13 +1,13 @@
 ## Zadanie 1 - Virtual Machine
 
-Celem tego zadania jest nauka korzystania z publicznych modułów.
+The purpose of the task is nauka korzystania z publicznych modułów.
 
 W tym zadaniu należy stworzyć maszynę wirtualną (Ubuntu) wykorzystując moduł: 
 https://registry.terraform.io/modules/Azure/compute/azurerm/latest. W tym celu wykorzystaj
 sieć `vnet-shared` oraz jej podsieć. Podczas tworzenia VM ustaw autentykację przy pomocy 
 klucza ssh i ustaw rozmiar „Standard_D2as_v5”. Wyszukaj w dokumentacji jak ustawić te parametry. 
  
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 1. Utwórz nowy plik i nazwij go np. `vm.tf`.
 2. W nowym pliku stwórz blok module i korzystając z dokumentacji utwórz nową maszynę wirtualną z systemem Ubuntu 
    (UbuntuServer), rozmiarem „Standard_D2as_v5”. Wykorzystaj sieć wskazaną w treści zadania. 
@@ -26,7 +26,7 @@ Helpful links:
 
 ## Zadanie 2 - Virtual Networks/Peering
 
-Celem tego zadania jest nauka tworzenia i wykorzystania własnych modułów.
+The purpose of the task is nauka tworzenia i wykorzystania własnych modułów.
 
 W ramach tego zadania należy utworzyć moduł składający się z pojedynczej sieci, połączonej peeringiem z siecią 
 `vnet-shared` stworzoną w poprzednich zadaniach. Pamiętaj, że peering należy skonfigurować w 2 strony, czyli 
@@ -38,7 +38,7 @@ Zdefiniuj w module następujące zmienne:
 * rg_name               - nazwa wykorzystywanej w kursie resource grupy
 * location              - lokalizacja wykorzystywanych w kursie zasobów (np. z resource grupy)
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 
 1. Utwórz nowy folder, który przeznaczysz na stworzenie kodu modułu.
 2. W nowym folderze zacznij od stworzenia pliku ze zmiennymi `providers.tf`, w którym zdefiniujesz dostawców potrzebnych do
@@ -107,7 +107,7 @@ Twój moduł powinien zawierać następujące zmienne:
 * sub_data_address_space - zarkes adresacji tworzonej podsieci `data`
 * sub_endpoint_address_space - zarkes adresacji tworzonej podsieci `endpoint`
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 
 1. Owtórz folder, w którym trzymasz kod modułu z poprzedniego zadania
 2. Uzupełnij plik `variables.tf` o brakujące zmienne potrzebne do stworzenia podsieci.
@@ -133,13 +133,13 @@ Aby zrealizować to zadanie, należy wykonać następujące kroki:
 
 ## Zadanie 4 - Private Endpoint: Key Vault
 
-Celem tego zadania jest nauka przekazywania danych wyjsciowych z modułu oraz ich wykorzystanie w głównym katalogu z kodem.
+The purpose of the task is nauka przekazywania danych wyjsciowych z modułu oraz ich wykorzystanie w głównym katalogu z kodem.
 
 W tym zadaniu należy postawić zasoby Private Endpoint dla stworzonego wcześniej Kay Vault'a. W tym celu należy
 wykorzystać sieć stworzoną w poprzednim zadaniu i przynależną do środowiska `dev`. Any umożliwić wykorzystanie tej sieci w 
 głównym katalogu, potrzebne będzie zdefiniowanie danych wyjściowych w module za pomocą których należy przekazać zasób podsieci.
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 
 1. W katalogu z kodem Twojego modułu stwórz nowy plik z kodem Terraform i nazwij go `outputs.tf`
 2. W nowym pliku stwórz blok wyjścia i przekaż za jego pomocą caly zasób podsieci `endpoint`.
@@ -152,7 +152,7 @@ Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 * [Dostępne nazwy zasobów podrzędnych](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-overview#private-link-resource)
-* [Dokumentacja zasobu private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint)
+* [Resource private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint)
 
 ## Zadanie 5 - Private Endpoint: File Share (Zadanie opcjonalne)
 
@@ -163,13 +163,13 @@ Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
 * [Dostępne nazwy zasobów podrzędnych](https://learn.microsoft.com/en-gb/azure/private-link/private-endpoint-overview#private-link-resource)
-* [Dokumentacja zasobu private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint)
+* [Resource private_endpoint](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_endpoint)
 
 ## Zadanie 6 - PrivateDNS Zones
 
 W tym zadaniu należy przypiąć wszystkie stworzone wcześniej prywatne strefy DNS do nowych sieci środowisk `dev` oraz `prod`.
 
-Na co warto zwrócić uwagę:
+Please note:
 * Aby przypiąć DNS private zone do sieci, potrzebne jest jej id. Skonfiguruj dostęp do zasobu sieci, dodając dla niego blok
    w pliku `outputs.tf` znajdującym sie w folderze modułu.
 * Analogicznie jak w przypadku sieci `vnet-shared`, udynamicznij nazwę połączenia łącząc nazwę strefy lub jej klucz w zmiennej
@@ -179,7 +179,7 @@ Na co warto zwrócić uwagę:
 Helpful links:
 
 * [Terraform Outputs](https://developer.hashicorp.com/terraform/language/values/outputs)
-* [Dokumentacja zasobu private_dns_zone_virtual_network_link](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link)
+* [Resource private_dns_zone_virtual_network_link](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link)
 
 ## Zadanie 7 - PostgreSql Flexible Server (Zadanie opcjonalne)
 
@@ -256,7 +256,7 @@ Helpful links:
 
 ## Zadanie 11 - CI/CD dla Terraform w Azure DevOps (Zadanie opcjonalne)
 
-Celem tego zadania jest nauka wykorzystania potoków CI/CD do tworzenia infrastruktury za pomocą Terraform w Azure DevOps.
+The purpose of the task is nauka wykorzystania potoków CI/CD do tworzenia infrastruktury za pomocą Terraform w Azure DevOps.
 
 > UWAGA: Do wykonania zadania potrzebny jest dostep do własnej organizacji w Azure DevOps oraz odpowiednie uprawnienia. Bieżący kurs nie przewiduje nadania dostępów dla kursantów dla środowisk Azure DevOps.**
 
@@ -264,7 +264,7 @@ Celem tego zadania jest nauka wykorzystania potoków CI/CD do tworzenia infrastr
 
 W tym zadaniu należy stworzyć potok CI/CD w Azure DevOps dla infrastruktury utrzymywanej za pomocą kodu Terraform, który będzie umożliwiał automatyczne tworzenie lub aktualizowanie zasobów w chmurze Azure. Potok powinien składać się z dwóch faz: Continuous Integration (CI) i Continuous Deployment (CD), zdefiniowanych w pliku konfiguracyjnym azure-pipelines.yml. Przykładowy plik ten znajduje się w bieżącej ścieżce repozytorium (Dzien2/Lab2/Zadanie11).
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 
 W środowisku Azure:
 

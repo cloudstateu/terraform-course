@@ -1,6 +1,6 @@
 ## Zadanie 1 - DNS Zones
 
-Celem tego zadania jest nauczenie się wykorzystywania pętli `for_each`.
+The purpose of the task is nauczenie się wykorzystywania pętli `for_each`.
 
 W ramach tego zadania należy utworzyć zmienną lokalną o nazwie `zones`, lub skorzystać z tej utworzonej w zadaniu 6 z dnia 1.
 Zmienna powinna mieć typ `map(string)` i zawierać prywatne strefy DNS dla następujących usług: Azure File Share, 
@@ -20,7 +20,7 @@ locals {
 }
 ```
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 
 1. Wykorzystaj plik Terraform, w którym zdefiniowałeś tworzenie prywatnych stref DNS w poprzednich zadaniach. Zmodyfikujemy go
    na potrzeby zadania bieżącego.
@@ -41,12 +41,12 @@ Helpful links:
 
 * [Zalecane nazwy prywatnych stref dns](https://learn.microsoft.com/pl-pl/azure/private-link/private-endpoint-dns#azure-services-dns-zone-configuration)
 * [Pętla for_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
-* [Dokumentacja zasobu private_dns_zone](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/private_dns_zone)
-* [Dokumentacja zasobu private_dns_zone_virtual_network_link](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link)
+* [Resource private_dns_zone](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/private_dns_zone)
+* [Resource private_dns_zone_virtual_network_link](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/private_dns_zone_virtual_network_link)
 
 ## Zadanie 2 - Key Vault Secrets (Zadanie opcjonalne)
 
-Celem tego zadania jest nauczenie się wykorzystania pętli count.
+The purpose of the task is nauczenie się wykorzystania pętli count.
 
 W ramach tego zadania należy utworzyć nową zmienną lokalną `passwords` typu `list(string)`.
 Dodaj do listy co najmniej dwa przykładowe hasła.
@@ -63,7 +63,7 @@ locals {
 }
 ```
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 
 1. W pliku `keyvault.tf` utwórz nową zmienną lokalną o nazwie `passwords`.
 2. Dodaj nowy zasób typu `azurerm_key_vault_secret`. Podczas konfiguracji wykorzystaj pętlę`count` i zadbaj o unikalność 
@@ -84,14 +84,14 @@ Helpful links:
 
 ## Zadanie: 3 - Log Analytics Workspace (Zadanie opcjonalne)
 
-Celem tego zadania jest nauczenie się wykorzystywania dynamic blocks.
+The purpose of the task is nauczenie się wykorzystywania dynamic blocks.
 
 W ramach tego zadania należy utworzyć zasób Log Analytics Workspace oraz skonfigurować przesyłanie do niego logów i metryk
 z usługi Azure Key Vault. W tym celu należy wykorzystać zasób `azurerm_monitor_diagnostic_setting` oraz pobrać dostępne 
 kategorie z wykorzystaniem bloku data `azurerm_monitor_diagnostic_categories`. Następnie udynamicznić bloki `enabled_log`
 oraz `metric` wykorzystując funkcjonalność dynamic block oraz pętlę for_each.
 
-Aby zrealizować to zadanie, należy wykonać następujące kroki:
+To complete the task, follow these steps:
 1. Utwórz nowy plik np. `monitoring.tf` i zdefiniuj w nim tworzenie zasobu Log Analytics: `azurerm_log_analytics_workspace`.
 2. Stwórz blok data typu `azurerm_monitor_diagnostic_categories` wskazując w argumencie `resource_id` ID Twojego Key Vault'a.
    Dzięki temu będziesz mógł pobrać wszystkie dostępne do śledzenia katerogie logów i metryk dla zasobu Azure Key Vault.
